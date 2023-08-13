@@ -67,7 +67,7 @@ Contoh Response:
 GET https://ricko88.github.io/api-wilayah-indonesia/api/regencies/{provinceId}.json
 ```
 
-Contoh untuk mengambil daftar kab/kota di provinsi Aceh (ID = 11):
+Contoh untuk mengambil daftar kab/kota di provinsi Sumatera Barat (ID = 13):
 
 ```
 GET https://ricko88.github.io/api-wilayah-indonesia/api/regencies/13.json
@@ -85,146 +85,37 @@ Contoh Response:
 GET https://ricko88.github.io/api-wilayah-indonesia/api/districts/{regencyId}.json
 ```
 
-Contoh untuk mengambil daftar kecamatan di Aceh Selatan (ID = 1103):
+Contoh untuk mengambil daftar kecamatan di Kabupaten Pasaman Barat (ID = 1312):
 
 ```
-GET https://ricko88.github.io/api-wilayah-indonesia/api/districts/1103.json
+GET https://ricko88.github.io/api-wilayah-indonesia/api/districts/1312.json
 ```
 
 Contoh Response:
 
 ```
-[
-  {
-    "id": "1103010",
-    "regency_id": "1103",
-    "name": "TRUMON"
-  },
-  {
-    "id": "1103011",
-    "regency_id": "1103",
-    "name": "TRUMON TIMUR"
-  },
-  ...
-]
+[{"id":"1312010","regency_id":"1312","name":"SUNGAI BEREMAS"},{"id":"1312020","regency_id":"1312","name":"RANAH BATAHAN"},{"id":"1312030","regency_id":"1312","name":"KOTO BALINGKA"},{"id":"1312040","regency_id":"1312","name":"SUNGAI AUR"},{"id":"1312050","regency_id":"1312","name":"LEMBAH MALINTANG"},{"id":"1312060","regency_id":"1312","name":"GUNUNG TULEH"},{"id":"1312070","regency_id":"1312","name":"TALAMAU"},{"id":"1312080","regency_id":"1312","name":"PASAMAN"},{"id":"1312090","regency_id":"1312","name":"LUHAK NAN DUO"},{"id":"1312100","regency_id":"1312","name":"SASAK RANAH PASISIE"},{"id":"1312110","regency_id":"1312","name":"KINALI"}]
 ```
 
-#### 4. Mengambil Daftar Kelurahan pada Kecamatan Tertentu
+#### 4. Mengambil Daftar Nagari pada Kecamatan Tertentu
 
 ```
 GET https://ricko88.github.io/api-wilayah-indonesia/api/villages/{districtId}.json
 ```
 
-Contoh untuk mengambil daftar kelurahan di Trumon (ID = 1103010):
+Contoh untuk mengambil daftar kelurahan di Sungai Beremas (ID = 1103010):
 
 ```
-GET https://ricko88.github.io/api-wilayah-indonesia/api/villages/1103010.json
-```
-
-Contoh Response:
-
-```
-[
-  {
-    "id": "1103010001",
-    "district_id": "1103010",
-    "name": "KUTA PADANG"
-  },
-  {
-    "id": "1103010002",
-    "district_id": "1103010",
-    "name": "RAKET"
-  },
-  ...
-]
-```
-
-#### 5. Mengambil Data Provinsi berdasarkan ID Provinsi
-
-```
-GET https://ricko88.github.io/api-wilayah-indonesia/api/province/{provinceId}.json
-```
-
-Contoh untuk mengambil data provinsi Aceh (ID = 11):
-
-```
-GET https://ricko88.github.io/api-wilayah-indonesia/api/province/11.json
+GET https://ricko88.github.io/api-wilayah-indonesia/api/villages/1312010.json
 ```
 
 Contoh Response:
 
 ```
-{
-  "id": "11",
-  "name": "ACEH"
-}
+[{"id":"1312010001","district_id":"1312010","name":"AIA BANGIH"}]
 ```
 
-#### 6. Mengambil Data Kab/Kota berdasarkan ID Kab/Kota
 
-```
-GET https://ricko88.github.io/api-wilayah-indonesia/api/regency/{regencyId}.json
-```
-
-Contoh untuk mengambil data kabupaten Aceh Selatan (ID = 1103):
-
-```
-GET https://ricko88.github.io/api-wilayah-indonesia/api/regency/1103.json
-```
-
-Contoh Response:
-
-```
-{
-  "id": "1103",
-  "province_id": "11",
-  "name": "KABUPATEN ACEH SELATAN"
-}
-```
-
-#### 7. Mengambil Data Kecamatan berdasarkan ID Kecamatan
-
-```
-GET https://ricko88.github.io/api-wilayah-indonesia/api/district/{districtId}.json
-```
-
-Contoh untuk mengambil data kecamatan Trumon Timur (ID = 1103011):
-
-```
-GET https://ricko88.github.io/api-wilayah-indonesia/api/district/1103011.json
-```
-
-Contoh Response:
-
-```
-{
-  "id": "1103011",
-  "regency_id": "1103",
-  "name": "TRUMON TIMUR"
-}
-```
-
-#### 8. Mengambil Data Kelurahan berdasarkan ID Kelurahan
-
-```
-GET https://ricko88.github.io/api-wilayah-indonesia/api/village/{villageId}.json
-```
-
-Contoh untuk mengambil data kelurahan Jambo Dalem (ID = 1103011010):
-
-```
-GET https://ricko88.github.io/api-wilayah-indonesia/api/village/1103011010.json
-```
-
-Contoh Response:
-
-```
-{
-  "id": "1103011010",
-  "district_id": "1103011",
-  "name": "JAMBO DALEM"
-}
-```
 
 ## LIMITASI
 
