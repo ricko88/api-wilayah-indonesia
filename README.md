@@ -15,6 +15,28 @@ API statis adalah API yang _endpoint_-nya terdiri dari file statis.
 * Dapat dihosting pada _static file hosting_ seperti Github Page, Netlify, dsb.
 * Proses lebih cepat karena tidak membutuhkan server-side scripting.
 
+#### Bagaimana cara kerjanya?
+
+* Daftar provinsi, kab/kota, kecamatan, kelurahan/desa disimpan pada folder `data` berupa file `csv` (agar mudah diedit).
+* Kemudian script `generate.php` dijalankan. Script ini akan membaca file `csv` didalam folder `data`, kemudian men-generate ribuan endpoint (file) kedalam folder `static/api`.
+* API siap 'dihidangkan'.
+
+#### Saya mau hosting di Github saya sendiri, bagaimana caranya?
+
+* Klik fork di pojok kanan atas.
+* Pada halaman forking, **HAPUS CENTANG** "Copy the master branch only".
+* Klik "Create Fork".
+* Setelah selesai di Fork, klik Settings (bukan setting account, tapi setting repository).
+* Klik menu "Pages" untuk masuk ke menu pengaturan GitHub Pages.
+* Pada menu pengaturan GitHub Pages:
+  * Pilih Source: Deploy from a Branch
+  * Branch: `gh-pages`
+  * Direktori: `/root`
+  * Klik Save
+* Tunggu beberapa menit (5-10 menitan), kembali ke halaman home repository (https://github.com/usernamekamu/api-wilayah-indonesia).
+* Kalau halaman sudah terdeploy, di bagian kanan halaman, akan muncul informasi "Environments". Kalau belum tunggu lagi beberapa menit, lalu refresh.
+* Kalau sudah muncul informasi Environmentsnya, klik bagian "🚀 github-pages".
+* Di halaman Deployments, klik "View Deployment" untuk melihat halaman yang berhasil terdeploy.
 ## ENDPOINTS
 
 #### 1. Mengambil Daftar Provinsi
