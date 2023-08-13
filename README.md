@@ -15,13 +15,6 @@ API statis adalah API yang _endpoint_-nya terdiri dari file statis.
 * Dapat dihosting pada _static file hosting_ seperti Github Page, Netlify, dsb.
 * Proses lebih cepat karena tidak membutuhkan server-side scripting.
 
-#### Bagaimana cara kerjanya?
-
-* Daftar provinsi, kab/kota, kecamatan, kelurahan/desa disimpan pada folder `data` berupa file `csv` (agar mudah diedit).
-* Kemudian script `generate.php` dijalankan. Script ini akan membaca file `csv` didalam folder `data`, kemudian men-generate ribuan endpoint (file) kedalam folder `static/api`.
-* API siap 'dihidangkan'.
-
-
 ## ENDPOINTS
 
 #### 1. Mengambil Daftar Provinsi
